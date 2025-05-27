@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Picverse Community - Home</title>
+  
+  <link rel="stylesheet" href="../CssCode/style.css">
+  <link rel="stylesheet" href="../CssCode/home.css">
+
+  <script src="../JsCode/script.js"></script>
+  <script src="../JsCode/scriptHome.js"></script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+</head>
+
+<body>
+  <div id = "head-placeholder"></div>
+
+  <main>
+        <!-- Hero Section with Slideshow -->
+        <section class="hero-section">
+            <div class="slideshow-container">
+                <div class="slide active">
+                    <img src="../Asset/8th Anniversary.JPG" alt="Digital Art Showcase">
+                    <div class="slide-content">
+                        <h2>Celebrate Digital Creativity</h2>
+                        <p>Artist: Anniversary Collection</p>
+                        <a href="gallery.html" class="cta-button">Explore Gallery</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="../Asset/Vol 3 artbook.JPG" alt="Community Art">
+                    <div class="slide-content">
+                        <h2>Join Our Creative Community</h2>
+                        <p>Artist: Community Contributors</p>
+                        <a href="gallery.html" class="cta-button">Explore Gallery</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="../Asset/v7.8 banner.JPG" alt="Latest Collection">
+                    <div class="slide-content">
+                        <h2>Discover Amazing Artworks</h2>
+                        <p>Artist: Featured Collection v7.8</p>
+                        <a href="gallery.html" class="cta-button">Explore Gallery</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Navigation Arrows -->
+            <button class="slide-nav prev" onclick="changeSlide(-1)">❮</button>
+            <button class="slide-nav next" onclick="changeSlide(1)">❯</button>
+            
+            <!-- Slide Indicators -->
+            <div class="slide-indicators">
+                <span class="indicator active" onclick="currentSlide(1)"></span>
+                <span class="indicator" onclick="currentSlide(2)"></span>
+                <span class="indicator" onclick="currentSlide(3)"></span>
+            </div>
+        </section>
+
+        <!-- Trending Tags Section -->
+        <section class="trending-section" data-aos="fade-up">
+            <div class="container">
+                <h2>Trending Tags</h2>
+                <div class="tags-container">
+                    <span class="tag">#DigitalArt</span>
+                    <span class="tag">#Fantasy</span>
+                    <span class="tag">#Portrait</span>
+                    <span class="tag">#Abstract</span>
+                    <span class="tag">#Landscape</span>
+                    <span class="tag">#Anime</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Artworks Section -->
+        <section class="featured-section" data-aos="fade-up">
+            <div class="container">
+                <h2>Featured Artworks</h2>
+                <div class="artworks-grid">
+                    <div class="artwork-card" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="artwork-image">
+                            <img src="../Asset/download (1).jpg" alt="Digital Masterpiece 1">
+                            <div class="overlay">
+                                <button class="view-btn">View Details</button>
+                            </div>
+                        </div>
+                        <div class="artwork-info">
+                            <h3>Cosmic Dreams</h3>
+                            <p class="artist">by Alex Chen</p>
+                            <div class="likes">
+                                <span>❤️ 1,247</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="artwork-card" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="artwork-image">
+                            <img src="../Asset/download (2).jpg" alt="Digital Masterpiece 2">
+                            <div class="overlay">
+                                <button class="view-btn">View Details</button>
+                            </div>
+                        </div>
+                        <div class="artwork-info">
+                            <h3>Neon Cityscape</h3>
+                            <p class="artist">by Maya Rodriguez</p>
+                            <div class="likes">
+                                <span>❤️ 892</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="artwork-card" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="artwork-image">
+                            <img src="../Asset/download (3).jpg" alt="Digital Masterpiece 3">
+                            <div class="overlay">
+                                <button class="view-btn">View Details</button>
+                            </div>
+                        </div>
+                        <div class="artwork-info">
+                            <h3>Abstract Emotions</h3>
+                            <p class="artist">by Jordan Kim</p>
+                            <div class="likes">
+                                <span>❤️ 1,156</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="artwork-card" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="artwork-image">
+                            <img src="../Asset/profile (1).jpg" alt="Digital Masterpiece 4">
+                            <div class="overlay">
+                                <button class="view-btn">View Details</button>
+                            </div>
+                        </div>
+                        <div class="artwork-info">
+                            <h3>Portrait Study</h3>
+                            <p class="artist">by Sam Thompson</p>
+                            <div class="likes">
+                                <span>❤️ 743</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="artwork-card" data-aos="zoom-in" data-aos-delay="500">
+                        <div class="artwork-image">
+                            <img src="../Asset/profile (2).jpg" alt="Digital Masterpiece 5">
+                            <div class="overlay">
+                                <button class="view-btn">View Details</button>
+                            </div>
+                        </div>
+                        <div class="artwork-info">
+                            <h3>Fantasy Realm</h3>
+                            <p class="artist">by Emily Davis</p>
+                            <div class="likes">
+                                <span>❤️ 1,389</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="artwork-card" data-aos="zoom-in" data-aos-delay="600">
+                        <div class="artwork-image">
+                            <img src="../Asset/profile (3).jpg" alt="Digital Masterpiece 6">
+                            <div class="overlay">
+                                <button class="view-btn">View Details</button>
+                            </div>
+                        </div>
+                        <div class="artwork-info">
+                            <h3>Minimalist Design</h3>
+                            <p class="artist">by Chris Wilson</p>
+                            <div class="likes">
+                                <span>❤️ 621</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="view-more-container" data-aos="fade-up">
+                    <a href="gallery.html" class="view-more-btn">View More Artworks</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="cta-section" data-aos="fade-up">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Ready to Share Your Art?</h2>
+                    <p>Join thousands of artists in our creative community. Share your work, get feedback, and grow your artistic journey.</p>
+                    <div class="cta-buttons">
+                        <a href="submission.html" class="cta-btn primary">Submit Your Art</a>
+                        <a href="community.html" class="cta-btn secondary">Join Community</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+  <div id = "foot-placeholder"></div>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+</body>
+
+</html>
