@@ -1,15 +1,3 @@
-* {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      background: linear-gradient(135deg, #0a0e27, #1a1f3a);
-      color: #ffffff;
-      font-family: 'Arial', sans-serif;
-    }
-
     /* Gallery Main Styles */
     .gallery-main {
       max-width: 1440px;
