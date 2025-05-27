@@ -17,7 +17,6 @@
 
   <main class="gallery-main">
     <!-- Tag Navigation -->
-     <!-- <div class="tagBar"> -->
     <nav class="tag-navigation">
       <button class="tag-btn active" onclick="scrollToTag('original')">#Original</button>
       <button class="tag-btn" onclick="scrollToTag('games')">#Games</button>
@@ -26,7 +25,6 @@
       <button class="tag-btn" onclick="scrollToTag('copyright')">#Copyright</button>
       <button class="tag-btn" onclick="scrollToTag('2025art')">#2025Art</button>
     </nav>
-    <!-- </div> -->
 
     <!-- Original Section -->
     <section id="original" class="tag-section">
@@ -294,8 +292,14 @@
           <p><strong>Tags:</strong> <span id="modal-tags">#Tag1 #Tag2</span></p>
           <p><strong>Total Likes:</strong> <span id="modal-likes">0</span></p>
           <div class="modal-actions">
-            <button class="like-btn" onclick="likeArtwork()">❤️ Like</button>
-            <button class="share-btn" onclick="shareArtwork()">📤 Share</button>
+            <div class="modal-actions-row">
+              <button class="like-btn" onclick="likeArtwork()">❤️ Like</button>
+              <button class="share-btn" onclick="shareArtwork()">📤 Share</button>
+            </div>
+            <div class="modal-actions-row">
+              <button class="comment-btn" onclick="commentArtwork()">💬 Comment</button>
+              <button class="bookmark-btn" onclick="bookmarkArtwork()">🔖 Bookmark</button>
+            </div>
           </div>
         </div>
       </div>

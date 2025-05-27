@@ -334,9 +334,10 @@
 /* Call to Action Section */
 .cta-section {
   padding: 5rem 0;
-  background: linear-gradient(135deg, rgba(243, 156, 18, 0.1), rgba(231, 76, 60, 0.1));
+  background: rgba(255, 215, 0, 0.15);
   border-top: 2px solid rgba(243, 156, 18, 0.3);
   border-bottom: 2px solid rgba(243, 156, 18, 0.3);
+  backdrop-filter: blur(15px);
 }
 
 .cta-content {

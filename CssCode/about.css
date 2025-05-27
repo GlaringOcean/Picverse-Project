@@ -64,7 +64,7 @@ main {
   transform: translateY(-50%);
   width: 4px;
   height: 100%;
-  background: linear-gradient(45deg, #f39c12, #e74c3c);
+  background: linear-gradient(45deg, #ffd700, #ffed4e);
   border-radius: 2px;
 }
 
