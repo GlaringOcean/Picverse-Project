@@ -279,8 +279,48 @@
   text-align: justify;
 }
 
-/* Responsive Design */
-@media (max-width: 1200px) {
+/* RESPONSIVE DESIGN */
+@media (min-width: 1441px) {
+  .community-main {
+    padding: 25px;
+    gap: 35px;
+  }
+  
+  .sidebar-left {
+    flex: 0 0 380px;
+    gap: 35px;
+  }
+  
+  .activity-notifications,
+  .recommended-creators,
+  .forum-post {
+    padding: 30px;
+  }
+  
+  .forum-discussions {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 1440px) and (min-width: 1200px) {
+  .community-main {
+    padding: 22px;
+    gap: 28px;
+  }
+  
+  .sidebar-left {
+    flex: 0 0 340px;
+    gap: 28px;
+  }
+  
+  .activity-notifications,
+  .recommended-creators,
+  .forum-post {
+    padding: 22px;
+  }
+}
+
+@media (max-width: 1199px) {
   .community-main {
     flex-direction: column;
     padding: 15px;

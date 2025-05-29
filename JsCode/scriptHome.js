@@ -1,3 +1,5 @@
+// Homepage Script Interactions
+
 // Slideshow functionality for Picverse Community Homepage
 let currentSlideIndex = 0;
 let slides = [];
@@ -456,3 +458,267 @@ window.addEventListener('error', (e) => {
 
 // Log initialization
 console.log('Picverse Slideshow script loaded successfully');
+
+// Art data storage
+const artworkData = {
+  // Featured Artworks Section
+  'featured1': {
+    image: '../Asset/download (1).JPG',
+    title: 'Cosmic Dreams',
+    artist: 'Alex Chen',
+    description: 'A powerful piece depicting a lone warrior standing against the odds, representing hope and determination in the face of adversity. The artwork combines traditional and modern techniques to create a stunning visual narrative.',
+    tags: '#Original #Fantasy #Warrior #Hope',
+    likes: 1247,
+    comments: 23,
+    bookmarked: false
+  },
+  'featured2': {
+    image: '../Asset/download (2).jpg',
+    title: 'Neon Cityscape',
+    artist: 'Maya Rodriguez',
+    description: 'A mesmerizing artwork that captures the beauty of twilight through vibrant colors and ethereal composition. The piece tells a story of transition and beauty in everyday moments.',
+    tags: '#Original #Landscape #Twilight #Sky',
+    likes: 892,
+    comments: 15,
+    bookmarked: false
+  },
+  'featured3': {
+    image: '../Asset/download (3).jpg',
+    title: 'Abstract Emotions',
+    artist: 'Jordan Kim',
+    description: 'An inspiring artwork that symbolizes breaking free from constraints and reaching for one\'s dreams. The dynamic composition and bold colors create a sense of movement and liberation.',
+    tags: '#Original #Freedom #Wings #Dreams',
+    likes: 1156,
+    comments: 41,
+    bookmarked: false
+  },
+  'featured4': {
+    image: '../Asset/profile (1).jpg',
+    title: 'Portrait Study',
+    artist: 'Sam Thompson',
+    description: 'A dramatic piece exploring the contrast between light and shadow, representing the eternal struggle between hope and despair. The artwork uses intricate details to convey deep emotions.',
+    tags: '#Original #Drama #Light #Shadow',
+    likes: 743,
+    comments: 8,
+    bookmarked: false
+  },
+  'featured5': {
+    image: '../Asset/profile (2).jpg',
+    title: 'Fantasy Realm',
+    artist: 'Emily Davis',
+    description: 'A narrative artwork that unfolds like a story in three parts, each representing a different stage of life\'s journey. The composition flows seamlessly from one act to the next.',
+    tags: '#Original #Narrative #Journey #Story',
+    likes: 1389,
+    comments: 19,
+    bookmarked: false
+  },
+  'featured6': {
+    image: '../Asset/profile (3).jpg',
+    title: 'Minimalist Design',
+    artist: 'Chris Wilson',
+    description: 'A narrative artwork that unfolds like a story in three parts, each representing a different stage of life\'s journey. The composition flows seamlessly from one act to the next.',
+    tags: '#Original #Narrative #Journey #Story',
+    likes: 621,
+    comments: 19,
+    bookmarked: false
+  }
+};
+
+// Current artwork being viewed
+let currentArtworkId = '';
+
+// Gallery functionality
+function scrollToTag(tagId) {
+  // Remove active class from all buttons
+  document.querySelectorAll('.tag-btn').forEach(btn => {
+    btn.classList.remove('active');
+  });
+  
+  // Add active class to clicked button
+  event.target.classList.add('active');
+  
+  // Scroll to section
+  const section = document.getElementById(tagId);
+  if (section) {
+    section.scrollIntoView({ 
+      behavior: 'smooth',
+      block: 'start'
+    });
+  }
+}
+
+// Modal functionality
+function openModal(artworkId) {
+  currentArtworkId = artworkId;
+  const artwork = artworkData[artworkId];
+  
+  if (!artwork) return;
+  
+  // Update modal content
+  document.getElementById('modal-image').src = artwork.image;
+  document.getElementById('modal-title').textContent = artwork.title;
+  document.getElementById('modal-artist').textContent = artwork.artist;
+  document.getElementById('modal-description').textContent = artwork.description;
+  document.getElementById('modal-tags').textContent = artwork.tags;
+  document.getElementById('modal-likes').textContent = artwork.likes;
+  
+  // Update button states
+  updateBookmarkButton();
+  
+  // Show modal
+  document.getElementById('modal').style.display = 'block';
+  document.body.style.overflow = 'hidden';
+  document.getElementById('modal').classList.add('show');
+}
+
+function closeModal() {
+   document.getElementById('modal').classList.remove('show');
+  document.getElementById('modal').style.display = 'none';
+  document.body.style.overflow = 'auto';
+  currentArtworkId = '';
+}
+
+// Modal action functions
+function likeArtwork() {
+  if (!currentArtworkId) return;
+  
+  const artwork = artworkData[currentArtworkId];
+  artwork.likes += 1;
+  document.getElementById('modal-likes').textContent = artwork.likes;
+  
+  // Add visual feedback
+  const likeBtn = document.querySelector('.like-btn');
+  likeBtn.style.transform = 'scale(0.95)';
+  setTimeout(() => {
+    likeBtn.style.transform = 'scale(1)';
+  }, 150);
+  
+  console.log(`Liked artwork: ${artwork.title}`);
+}
+
+function shareArtwork() {
+  if (!currentArtworkId) return;
+  
+  const artwork = artworkData[currentArtworkId];
+  
+  // Create share data
+  const shareData = {
+    title: artwork.title,
+    text: `Check out this amazing artwork by ${artwork.artist}!`,
+    url: window.location.href
+  };
+  
+  // Try to use Web Share API if available
+  if (navigator.share) {
+    navigator.share(shareData).catch(err => {
+      console.log('Error sharing:', err);
+      fallbackShare(artwork);
+    });
+  } else {
+    fallbackShare(artwork);
+  }
+}
+
+function fallbackShare(artwork) {
+  // Fallback sharing method
+  const shareText = `Check out "${artwork.title}" by ${artwork.artist} - ${window.location.href}`;
+  
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(shareText).then(() => {
+      alert('Share link copied to clipboard!');
+    }).catch(() => {
+      prompt('Copy this link to share:', shareText);
+    });
+  } else {
+    prompt('Copy this link to share:', shareText);
+  }
+}
+
+function commentArtwork() {
+  if (!currentArtworkId) return;
+  
+  const artwork = artworkData[currentArtworkId];
+  const comment = prompt(`Add a comment for "${artwork.title}":`);
+  
+  if (comment && comment.trim()) {
+    artwork.comments += 1;
+    console.log(`Comment added to ${artwork.title}: ${comment}`);
+    
+    // Add visual feedback
+    const commentBtn = document.querySelector('.comment-btn');
+    commentBtn.style.transform = 'scale(0.95)';
+    setTimeout(() => {
+      commentBtn.style.transform = 'scale(1)';
+    }, 150);
+    
+    alert('Comment added successfully!');
+  }
+}
+
+function bookmarkArtwork() {
+  if (!currentArtworkId) return;
+  
+  const artwork = artworkData[currentArtworkId];
+  artwork.bookmarked = !artwork.bookmarked;
+  
+  updateBookmarkButton();
+  
+  const action = artwork.bookmarked ? 'added to' : 'removed from';
+  console.log(`Artwork ${action} bookmarks: ${artwork.title}`);
+  
+  // Add visual feedback
+  const bookmarkBtn = document.querySelector('.bookmark-btn');
+  bookmarkBtn.style.transform = 'scale(0.95)';
+  setTimeout(() => {
+    bookmarkBtn.style.transform = 'scale(1)';
+  }, 150);
+}
+
+function updateBookmarkButton() {
+  if (!currentArtworkId) return;
+  
+  const artwork = artworkData[currentArtworkId];
+  const bookmarkBtn = document.querySelector('.bookmark-btn');
+  
+  if (artwork.bookmarked) {
+    bookmarkBtn.innerHTML = '🔖 Bookmarked';
+    bookmarkBtn.style.background = 'linear-gradient(145deg, #4caf50, #66bb6a)';
+  } else {
+    bookmarkBtn.innerHTML = '🔖 Bookmark';
+    bookmarkBtn.style.background = 'linear-gradient(145deg, #ff5722, #ff8a65)';
+  }
+}
+
+// Close modal when clicking outside
+window.onclick = function(event) {
+  const modal = document.getElementById('modal');
+  if (event.target === modal) {
+    closeModal();
+  }
+}
+
+// Close modal with Escape key
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'Escape') {
+    closeModal();
+  }
+});
+
+// Initialize page
+document.addEventListener('DOMContentLoaded', function() {
+  console.log('Picverse Gallery loaded successfully!');
+  
+  // Add smooth scrolling behavior to all internal links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    });
+  });
+});

@@ -1,3 +1,5 @@
+/* Gallery Page Styles */
+
 /* Gallery Main Container - Properly centered */
 .gallery-main {
   max-width: 1440px;
@@ -435,8 +437,7 @@
   }
 }
 
-/* RESPONSIVE DESIGN BREAKPOINTS */
-
+/* RESPONSIVE DESIGN */
 /* Large Desktop (1440px+) */
 @media (min-width: 1441px) {
   .art-grid {
@@ -623,7 +624,7 @@
 }
 
 /* Mobile Small (320px - 480px) */
-@media (max-width: 480px) {
+@media (max-width: 480px) and (min-width: 320px){
   .gallery-main {
     padding: 10px 8px;
   }

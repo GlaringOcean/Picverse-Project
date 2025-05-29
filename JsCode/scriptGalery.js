@@ -1,4 +1,4 @@
-// Gallery data structure
+// Gallery Page Script Interactions
 
 // Art data storage
 const artworkData = {

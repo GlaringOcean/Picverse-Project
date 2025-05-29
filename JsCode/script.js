@@ -1,3 +1,5 @@
+// Global Script Interactions
+
 document.addEventListener("DOMContentLoaded", function () {
   // Initialize AOS if available
   if (typeof AOS !== 'undefined') {

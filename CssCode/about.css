@@ -1,3 +1,4 @@
+/* About Us Page Styles */
 main {
   flex: 1;
   display: flex;
@@ -79,7 +80,6 @@ main {
   color: rgba(255, 255, 255, 0.9);
   text-align: justify;
 }
-
 
 /* Mission List Styles */
 .about ul {
@@ -180,8 +180,60 @@ main {
   }
 }
 
-/* Responsive Design */
-@media screen and (max-width: 1024px) {
+/* RESPONSIVE DESIGN */
+/* Large Desktop (1440px+) */
+@media (min-width: 1440px) {
+  main {
+    padding: 2.5rem;
+  }
+  
+  .about {
+    padding: 3.5rem;
+    max-width: 1600px;
+  }
+  
+  .about h1 {
+    font-size: 3.2rem;
+  }
+  
+  .about h2 {
+    font-size: 2rem;
+  }
+  
+  .about p {
+    font-size: 1.2rem;
+  }
+  
+  .feature-card {
+    padding: 2rem;
+  }
+}
+
+/* Desktop (1200px - 1440px) */
+@media (max-width: 1439px) and (min-width: 1200px) {
+  main {
+    padding: 2rem;
+  }
+  
+  .about {
+    padding: 3rem;
+  }
+  
+  .about h1 {
+    font-size: 2.8rem;
+  }
+  
+  .about h2 {
+    font-size: 1.8rem;
+  }
+  
+  .about p {
+    font-size: 1.1rem;
+  }
+}
+
+/* Large Tablet/Small Desktop (992px - 1199px) */
+@media (max-width: 1199px) and (min-width: 992px) {
   main {
     padding: 1.5rem;
   }
@@ -199,7 +251,8 @@ main {
   }
 }
 
-@media screen and (max-width: 768px) {
+/* Tablet (768px - 991px) */
+@media (max-width: 991px) and (min-width: 768px) {
   main {
     padding: 1rem;
   }
@@ -239,7 +292,8 @@ main {
   }
 }
 
-@media screen and (max-width: 480px) {
+/* Mobile Large (481px - 767px) */
+@media (max-width: 767px) and (min-width: 481px) {
   main {
     padding: 0.5rem;
   }
@@ -283,7 +337,53 @@ main {
   }
 }
 
-@media screen and (max-width: 350px) {
+/* Mobile Small (320px - 480px) */
+@media (max-width: 480px) and (min-width: 320px) {
+  main {
+    padding: 0.5rem;
+  }
+  
+  .about {
+    padding: 1.5rem;
+    border-radius: 15px;
+  }
+  
+  .about h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .about h2 {
+    font-size: 1.3rem;
+    margin: 1.5rem 0 0.8rem 0;
+  }
+  
+  .about p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+  
+  .about li {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    padding-left: 1.2rem;
+  }
+  
+  .feature-card {
+    padding: 1rem;
+    border-left-width: 3px;
+  }
+  
+  .about h2:last-child {
+    font-size: 1.2rem;
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+}
+
+/* Extra Small Mobile (below 320px) */
+@media (max-width: 319px) {
   .about {
     padding: 1rem;
   }

@@ -1,3 +1,5 @@
+<!-- Homepage -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -84,14 +86,14 @@
             <div class="artwork-image">
               <img src="../Asset/download (1).jpg" alt="Cosmic Dreams">
               <div class="overlay">
-                <button class="view-btn" onclick="openModal('artwork1')">View Details</button>
+                <button class="view-btn" onclick="openModal('featured1')">View Details</button>
               </div>
             </div>
             <div class="artwork-info">
               <h3>Cosmic Dreams</h3>
               <p class="artist">by Alex Chen</p>
               <div class="likes">
-                <span>❤️ 1,247</span>
+                <span>❤️ 1247</span>
               </div>
             </div>
           </div>
@@ -100,7 +102,7 @@
             <div class="artwork-image">
               <img src="../Asset/download (2).jpg" alt="Neon Cityscape">
               <div class="overlay">
-                <button class="view-btn" onclick="openModal('artwork2')">View Details</button>
+                <button class="view-btn" onclick="openModal('featured2')">View Details</button>
               </div>
             </div>
             <div class="artwork-info">
@@ -116,14 +118,14 @@
             <div class="artwork-image">
               <img src="../Asset/download (3).jpg" alt="Abstract Emotions">
               <div class="overlay">
-                <button class="view-btn" onclick="openModal('artwork3')">View Details</button>
+                <button class="view-btn" onclick="openModal('featured3')">View Details</button>
               </div>
             </div>
             <div class="artwork-info">
               <h3>Abstract Emotions</h3>
               <p class="artist">by Jordan Kim</p>
               <div class="likes">
-                <span>❤️ 1,156</span>
+                <span>❤️ 1156</span>
               </div>
             </div>
           </div>
@@ -132,7 +134,7 @@
             <div class="artwork-image">
               <img src="../Asset/profile (1).jpg" alt="Portrait Study">
               <div class="overlay">
-                <button class="view-btn" onclick="openModal('artwork4')">View Details</button>
+                <button class="view-btn" onclick="openModal('featured4')">View Details</button>
               </div>
             </div>
             <div class="artwork-info">
@@ -148,14 +150,14 @@
             <div class="artwork-image">
               <img src="../Asset/profile (2).jpg" alt="Fantasy Realm">
               <div class="overlay">
-                <button class="view-btn" onclick="openModal('artwork5')">View Details</button>
+                <button class="view-btn" onclick="openModal('featured5')">View Details</button>
               </div>
             </div>
             <div class="artwork-info">
               <h3>Fantasy Realm</h3>
               <p class="artist">by Emily Davis</p>
               <div class="likes">
-                <span>❤️ 1,389</span>
+                <span>❤️ 1389</span>
               </div>
             </div>
           </div>
@@ -164,7 +166,7 @@
             <div class="artwork-image">
               <img src="../Asset/profile (3).jpg" alt="Minimalist Design">
               <div class="overlay">
-                <button class="view-btn" onclick="openModal('artwork6')">View Details</button>
+                <button class="view-btn" onclick="openModal('featured6')">View Details</button>
               </div>
             </div>
             <div class="artwork-info">
@@ -199,46 +201,31 @@
   </main>
 
   <!-- Artwork Modal -->
-  <!-- <div class="artwork-modal" id="artworkModal">
+  <div id="modal" class="modal">
     <div class="modal-content">
-      <div class="modal-image">
-        <img id="modalImage" src="" alt="">
-        <button class="close-btn" onclick="closeModal()">×</button>
-      </div>
-      <div class="modal-details">
-        <div class="modal-header">
-          <h2 id="modalTitle"></h2>
-          <div class="modal-artist">Artist: <span id="modalArtist"></span></div>
-        </div>
-        
-        <div class="modal-description" id="modalDescription"></div>
-        
-        <div class="modal-tags">
-          <h4>Tags:</h4>
-          <div class="modal-tags-list" id="modalTags"></div>
-        </div>
-        
-        <div class="modal-stats">
-          <span>Total Likes: <span id="modalLikes"></span></span>
-        </div>
-        
-        <div class="modal-actions">
-          <button class="action-btn like-btn">
-            <span>❤️</span> LIKE
-          </button>
-          <button class="action-btn share-btn">
-            <span>📤</span> SHARE
-          </button>
-          <button class="action-btn comment-btn">
-            <span>💬</span> COMMENT
-          </button>
-          <button class="action-btn bookmark-btn">
-            <span>📌</span> BOOKMARK
-          </button>
+      <span class="close" onclick="closeModal()">&times;</span>
+      <div class="modal-body">
+        <img id="modal-image" src="" alt="Full Artwork">
+        <div class="modal-info">
+          <h2 id="modal-title">Artwork Title</h2>
+          <p><strong>Artist:</strong> <span id="modal-artist">Artist Name</span></p>
+          <p><strong>Description:</strong> <span id="modal-description">Artwork description</span></p>
+          <p><strong>Tags:</strong> <span id="modal-tags">#Tag1 #Tag2</span></p>
+          <p><strong>Total Likes:</strong> <span id="modal-likes">0</span></p>
+          <div class="modal-actions">
+            <div class="modal-actions-row">
+              <button class="like-btn" onclick="likeArtwork()">❤️ Like</button>
+              <button class="share-btn" onclick="shareArtwork()">📤 Share</button>
+            </div>
+            <div class="modal-actions-row">
+              <button class="comment-btn" onclick="commentArtwork()">💬 Comment</button>
+              <button class="bookmark-btn" onclick="bookmarkArtwork()">🔖 Bookmark</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div> -->
+  </div>
   
   <div id = "foot-placeholder"></div>
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
