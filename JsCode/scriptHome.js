@@ -463,7 +463,7 @@ console.log('Picverse Slideshow script loaded successfully');
 const artworkData = {
   // Featured Artworks Section
   'featured1': {
-    image: '../Asset/download (1).JPG',
+    image: '../Asset/download (1).jpg',
     title: 'Cosmic Dreams',
     artist: 'Alex Chen',
     description: 'A powerful piece depicting a lone warrior standing against the odds, representing hope and determination in the face of adversity. The artwork combines traditional and modern techniques to create a stunning visual narrative.',
