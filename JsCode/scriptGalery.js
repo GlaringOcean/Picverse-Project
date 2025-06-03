@@ -4,7 +4,7 @@
 const artworkData = {
   // Original Section
   'original1': {
-    image: '../Asset/8th Anniversary.jpg',
+    image: '../Asset/8th Anniversary.JPG',
     title: 'The Last Warrior: Hope at the Edge of the Blade',
     artist: 'CanvasCraze',
     description: 'A powerful piece depicting a lone warrior standing against the odds, representing hope and determination in the face of adversity. The artwork combines traditional and modern techniques to create a stunning visual narrative.',
@@ -86,7 +86,7 @@ const artworkData = {
     bookmarked: false
   },
   'games4': {
-    image: '../Asset/v7.8 banner.jpg',
+    image: '../Asset/v7.8 banner.JPG',
     title: 'Battle Arena: Champions Unite',
     artist: 'PixelMaster',
     description: 'An action-packed artwork depicting the ultimate battle arena where champions from different realms come together to compete. The dynamic composition captures the intensity of competition.',
@@ -96,7 +96,7 @@ const artworkData = {
     bookmarked: false
   },
   'games5': {
-    image: '../Asset/Vol 3 artbook.jpg',
+    image: '../Asset/Vol 3 artbook.JPG',
     title: 'Fantasy Quest: Legends Awakened',
     artist: 'GameArtist',
     description: 'A comprehensive artwork collection showcasing the rich world of Fantasy Quest. Each element tells part of a larger story about legendary heroes and their epic adventures.',
@@ -108,7 +108,7 @@ const artworkData = {
 
   // Fanart Section
   'fanart1': {
-    image: '../Asset/8th Anniversary.jpg',
+    image: '../Asset/8th Anniversary.JPG',
     title: 'Anime Heroes: Bonds of Friendship',
     artist: 'AnimeLover99',
     description: 'A heartwarming fanart celebrating the bonds between anime characters. The artwork captures the essence of friendship, loyalty, and the power of working together.',
@@ -190,7 +190,7 @@ const artworkData = {
     bookmarked: false
   },
   'picture4': {
-    image: '../Asset/v7.8 banner.jpg',
+    image: '../Asset/v7.8 banner.JPG',
     title: 'Abstract Vision: Beyond Reality',
     artist: 'AbstractArt',
     description: 'An abstract composition that challenges perception and invites interpretation. The piece uses color, form, and texture to create meaning beyond literal representation.',
@@ -200,7 +200,7 @@ const artworkData = {
     bookmarked: false
   },
   'picture5': {
-    image: '../Asset/Vol 3 artbook.jpg',
+    image: '../Asset/Vol 3 artbook.JPG',
     title: 'Landscape Dreams: Scenic Wonders',
     artist: 'LandscapeArt',
     description: 'A breathtaking landscape that captures the majesty of natural wonders. The photograph showcases the artist\'s ability to find beauty in the world around us.',
@@ -212,7 +212,7 @@ const artworkData = {
 
   // Copyright Section
   'copyright1': {
-    image: '../Asset/8th Anniversary.jpg',
+    image: '../Asset/8th Anniversary.JPG',
     title: 'Licensed Art: Professional Collection',
     artist: 'ProArtist',
     description: 'A professionally licensed artwork that meets industry standards for commercial use. The piece demonstrates high-quality artmanship and creative vision.',
@@ -294,7 +294,7 @@ const artworkData = {
     bookmarked: false
   },
   '2025art4': {
-    image: '../Asset/v7.8 banner.jpg',
+    image: '../Asset/v7.8 banner.JPG',
     title: 'AI Collaboration: Human-Machine Creativity',
     artist: 'AIArtist',
     description: 'A collaborative artwork created through human-AI partnership. The piece explores the potential of artificial intelligence as a creative tool and collaborator.',
@@ -304,7 +304,7 @@ const artworkData = {
     bookmarked: false
   },
   '2025art5': {
-    image: '../Asset/Vol 3 artbook.jpg',
+    image: '../Asset/Vol 3 artbook.JPG',
     title: 'Next Generation: Art of Tomorrow',
     artist: 'NextGenArt',
     description: 'A next-generation artwork that pushes the boundaries of traditional art forms. The piece represents the cutting edge of contemporary artistic expression.',
